@@ -1,0 +1,9 @@
+<h1>Showing articles details</h1>
+
+<p><strong>Title:</strong><%=@article.title%></p>
+<p><strong>description</strong> <%=@article.description %> </p>
+<%= link_to 'edit' , edit_article_path(@article.id) %>|
+<%= link_to 'delete', article_path(@article.id) , data: {turbo_method: :delete} , onclick: "return confirm('are you sure you want to delete this article?')" %>
+<%= # button_to 'Delete', article_path(@article), method: :delete ,onclick: "return confirm('are you sure you want to delete this article?')" 
+%>
+<%= link_to 'Return to articles listing' , articles_path %>
